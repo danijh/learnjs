@@ -1,8 +1,11 @@
 var penumpang = [];
 var tambahPenumpang = function (namaPenumpang, penumpang) {
   //jika angkot kosong
-  // tambah penumpang di awal array
-  // kembalikan isi array & keluar dari function
+  if (penumpang.length == 0) {
+    penumpang.unshift(namaPenumpang); // tambah penumpang di awal array
+    console.log(penumpang); // kembalikan isi array & keluar dari function
+  }
+
   //else
   // telusuri seluruh kursi dari awal
   // jika ada kursi kosong
@@ -15,3 +18,5 @@ var tambahPenumpang = function (namaPenumpang, penumpang) {
   // tambah penumpang di akhir array
   // kembalikan isi array & keluar dari function
 };
+
+tambahPenumpang("Dani", penumpang);
